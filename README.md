@@ -6,4 +6,4 @@ A pytorch implementation of the paper "Character-level Convolutional Networks fo
 - python 3.6  
 
 # tensorboardX
-! (https://github.com/cswangjiawei/char-cnn-text-classification/blob/master/image/ag_news.png)
+![tensorboardx](https://github.com/cswangjiawei/char-cnn-text-classification/blob/master/image/ag_news.png)
