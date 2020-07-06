@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 from train import train_model, evaluate
-from tensorboardX import SummaryWriter
+from torch.utils.tensorboard import SummaryWriter
 import os
 import torch
 import random
@@ -89,7 +89,7 @@ if __name__ == '__main__':
         print()
 
         if early_stop >= args.patience:
-                exit(0)
+            exit(0)
 
     train_end = time.time()
     train_cost = train_end - train_begin
