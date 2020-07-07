@@ -28,7 +28,8 @@ def evaluate(dataloader, model):
         batch_sent = batch['sent']
         batch_label = batch['label'].view(-1)
         batch_label.sub_(1)
-        out_feature = model(batch_sent)
+        with torch.no_grad():
+            out_feature = model(batch_sent)
         _, preds = torch.max(out_feature, 1)
         wrong_num += torch.sum((preds != batch_label)).item()
         total_num += len(batch_label)
